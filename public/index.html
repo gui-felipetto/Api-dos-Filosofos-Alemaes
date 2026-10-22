@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experimente a API dos Filósofos Alemães. Pesquise autores, filtre por corrente e consulte as respostas em JSON.">
+  <meta name="theme-color" content="#142738">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/index.css">
+  <script type="module" src="/app.js"></script>
+  <title>API dos Filósofos Alemães · Console de consulta</title>
+</head>
+<body>
+  <a class="pular" href="#consulta">Pular para a consulta</a>
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a class="marca" href="/" aria-label="API dos Filósofos Alemães, início"><span class="simbolo" aria-hidden="true">{ φ }</span><span>Filósofos Alemães <small>API</small></span></a>
+      <nav aria-label="Navegação principal">
+        <a href="#consulta">Consultar</a>
+        <a href="#documentacao">Endpoints</a>
+        <a href="https://github.com/gui-felipetto/Api-dos-Filosofos-Alemaes" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="introducao" aria-labelledby="titulo">
+      <p class="sobretitulo">UM CATÁLOGO DE IDEIAS, ABERTO PARA CONSULTA</p>
+      <h1 id="titulo">Filosofia alemã,<br>em uma consulta<span>.</span></h1>
+      <p class="subtitulo">Encontre pensadores, explore correntes e receba dados em JSON.<br> Use este console para experimentar a API.</p>
+      <div class="caracteristicas"><span>REST API</span><span>Sem autenticação</span><span>Respostas em português</span></div>
+    </section>
+
+    <section id="consulta" class="console" aria-label="Console de consulta da API">
+      <aside class="painel-controles">
+        <div class="titulo-painel"><span class="numero">01</span><h2>Monte sua consulta</h2></div>
+        <form id="form-pesquisa" role="search">
+          <label for="termo-pesquisa">Nome ou ideia</label>
+          <input type="search" id="termo-pesquisa" name="q" placeholder="Ex.: Kant, razão, fenomenologia" maxlength="200" autocomplete="off" aria-describedby="dica-pesquisa">
+          <p id="dica-pesquisa" class="ajuda">A busca também encontra descrições e correntes. Acentos são opcionais.</p>
+          <label for="corrente">Corrente de pensamento</label>
+          <select id="corrente" name="corrente"><option value="">Todas as correntes</option></select>
+          <p id="aviso-correntes" class="ajuda" role="status"></p>
+          <div class="acoes"><button id="botao-pesquisa" class="botao primario" type="submit">Consultar API <span aria-hidden="true">→</span></button><button id="limpa-pesquisa" class="botao secundario" type="button">Limpar</button></div>
+        </form>
+        <div class="sugestoes"><p>Comece por um nome</p><div><button type="button" data-busca="Kant">Kant</button><button type="button" data-busca="Hegel">Hegel</button><button type="button" data-busca="Habermas">Habermas</button></div></div>
+        <div class="nota"><span aria-hidden="true">↗</span><p>Quer integrar ao seu projeto?<br><a href="#documentacao">Veja os endpoints e exemplos</a>.</p></div>
+      </aside>
+
+      <div class="painel-resultados">
+        <div class="titulo-painel"><span class="numero">02</span><h2>Resposta da API</h2><span id="http-status" class="status-http">Aguardando</span></div>
+        <div class="requisicao"><span class="metodo">GET</span><a id="endpoint" href="/api/filosofos?limite=6" target="_blank" rel="noopener noreferrer">/api/filosofos?limite=6</a><button type="button" id="copiar-url" class="botao-texto" aria-label="Copiar URL completa da consulta">Copiar URL</button></div>
+        <p id="mensagem" class="mensagem" role="status" aria-live="polite">Consultando o catálogo…</p>
+        <p id="erro-consulta" class="erro" role="alert" hidden></p>
+        <div id="resultados-pesquisa" class="resultados" aria-busy="true"></div>
+        <nav id="paginacao" class="paginacao" aria-label="Páginas de resultados" hidden><button id="anterior" class="botao secundario" type="button">← Anterior</button><span id="pagina-atual"></span><button id="proxima" class="botao secundario" type="button">Próxima →</button></nav>
+        <details id="resposta-json" class="json" hidden><summary>Ver resposta JSON</summary><div class="json-acoes"><button type="button" id="copiar-json" class="botao-texto">Copiar JSON</button></div><pre><code id="json-conteudo"></code></pre></details>
+        <p id="aviso-copia" class="ajuda aviso-copia" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="documentacao" class="documentacao" aria-labelledby="titulo-docs">
+      <div class="docs-intro"><p class="sobretitulo">PARA USAR NO SEU PROJETO</p><h2 id="titulo-docs">Uma API simples.<br>Pronta para consultar.</h2><p>Todos os endpoints são públicos e aceitam GET. As consultas retornam JSON e permitem acesso de outras origens via CORS.</p><a class="link-destaque" href="/api/openapi.json" target="_blank" rel="noopener noreferrer">Abrir especificação OpenAPI ↗</a></div>
+      <div class="endpoints">
+        <a href="/api/filosofos" target="_blank" rel="noopener noreferrer"><span class="metodo">GET</span><code>/api/filosofos</code><span>Lista, busca e paginação ↗</span></a>
+        <a href="/api/filosofos/immanuel-kant" target="_blank" rel="noopener noreferrer"><span class="metodo">GET</span><code>/api/filosofos/:idOuSlug</code><span>Detalhes de um filósofo ↗</span></a>
+        <a href="/api/correntes" target="_blank" rel="noopener noreferrer"><span class="metodo">GET</span><code>/api/correntes</code><span>Correntes disponíveis ↗</span></a>
+        <a href="/api/status" target="_blank" rel="noopener noreferrer"><span class="metodo">GET</span><code>/api/status</code><span>Disponibilidade da API ↗</span></a>
+        <div class="exemplo"><p>Exemplo com JavaScript</p><pre><code>const resposta = await fetch(
+  '/api/filosofos?q=kant&amp;limite=5'
+);
+if (!resposta.ok) throw new Error('Falha na consulta');
+const { dados, paginacao } = await resposta.json();</code></pre><p>Em outro site, use o domínio desta API antes de <code>/api</code>.</p></div>
+      </div>
+      <div class="parametros"><h3>Parâmetros de consulta</h3><div class="tabela-rolagem"><table><caption class="sr-only">Parâmetros aceitos por GET /api/filosofos</caption><thead><tr><th>Parâmetro</th><th>O que faz</th><th>Padrão</th></tr></thead><tbody><tr><td><code>q</code></td><td>Busca no nome, descrição e correntes. Até 200 caracteres.</td><td>Todos</td></tr><tr><td><code>corrente</code></td><td>Filtra pelo nome completo de uma corrente.</td><td>Todas</td></tr><tr><td><code>pagina</code></td><td>Número da página, de 1 a 1.000.000.</td><td>1</td></tr><tr><td><code>limite</code></td><td>Resultados por página, de 1 a 100.</td><td>20</td></tr></tbody></table></div><p class="ajuda">Os resultados seguem a ordem alfabética. A busca ignora acentos e maiúsculas; vários termos devem estar presentes. Consultas sem resultados retornam uma lista vazia. Parâmetros inválidos retornam 400; um ID ou slug inexistente retorna 404.</p></div>
+    </section>
+  </main>
+  <footer class="rodape"><div class="container"><p>API dos Filósofos Alemães <span>·</span> Um projeto de Guilherme Felipetto</p><p>Resumos introdutórios, com fontes para continuar a leitura.</p></div></footer>
+  <noscript><p class="container">Ative o JavaScript para usar o console. A API pode ser consultada diretamente em <a href="/api/filosofos">/api/filosofos</a>.</p></noscript>
+</body>
+</html>
