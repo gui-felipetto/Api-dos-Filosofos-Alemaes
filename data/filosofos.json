@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "slug": "immanuel-kant",
+    "nome": "Immanuel Kant",
+    "descricao": "Desenvolveu o idealismo transcendental, investigando as condições e os limites do conhecimento. Sua ética deontológica, baseada no imperativo categórico, e suas reflexões sobre estética e política influenciaram profundamente a filosofia moderna.",
+    "correntes": ["Idealismo transcendental"],
+    "fontes": ["https://plato.stanford.edu/entries/kant/"]
+  },
+  {
+    "id": 2,
+    "slug": "georg-wilhelm-friedrich-hegel",
+    "nome": "Georg Wilhelm Friedrich Hegel",
+    "descricao": "Representante do idealismo alemão, desenvolveu uma filosofia sistemática sobre lógica, natureza e espírito. Sua dialética investiga o desenvolvimento dos conceitos por meio de suas contradições e relações, com grande influência na filosofia da história e na filosofia política.",
+    "correntes": ["Idealismo alemão", "Idealismo absoluto"],
+    "fontes": ["https://plato.stanford.edu/entries/hegel/"]
+  },
+  {
+    "id": 3,
+    "slug": "arthur-schopenhauer",
+    "nome": "Arthur Schopenhauer",
+    "descricao": "Conhecido por seu pessimismo filosófico, interpretou a realidade como vontade e representação. Identificou no desejo uma fonte recorrente de sofrimento e atribuiu à contemplação estética e à compaixão um papel central em sua filosofia.",
+    "correntes": ["Pessimismo filosófico", "Voluntarismo"],
+    "fontes": ["https://plato.stanford.edu/entries/schopenhauer/"]
+  },
+  {
+    "id": 4,
+    "slug": "friedrich-nietzsche",
+    "nome": "Friedrich Nietzsche",
+    "descricao": "Crítico da moral tradicional, do cristianismo e de pressupostos da metafísica, investigou a formação dos valores e suas relações com a vida. Elaborou ideias como a vontade de poder, o eterno retorno e o além-do-homem, influenciando a filosofia e a crítica cultural.",
+    "correntes": ["Perspectivismo"],
+    "fontes": ["https://plato.stanford.edu/entries/nietzsche/"]
+  },
+  {
+    "id": 5,
+    "slug": "karl-marx",
+    "nome": "Karl Marx",
+    "descricao": "Filósofo e crítico da economia política, analisou o capitalismo, a alienação e os conflitos entre classes sociais. Sua concepção materialista da história relaciona transformações sociais às condições de produção e às relações econômicas.",
+    "correntes": ["Materialismo histórico"],
+    "fontes": ["https://plato.stanford.edu/entries/marx/"]
+  },
+  {
+    "id": 6,
+    "slug": "martin-heidegger",
+    "nome": "Martin Heidegger",
+    "descricao": "Investigou a questão do sentido do ser, especialmente em Ser e Tempo, a partir da existência humana e de seu caráter de ser-no-mundo. Sua obra influenciou a fenomenologia, a hermenêutica e o existencialismo.",
+    "correntes": ["Fenomenologia", "Hermenêutica"],
+    "fontes": ["https://plato.stanford.edu/entries/heidegger/"]
+  },
+  {
+    "id": 7,
+    "slug": "jurgen-habermas",
+    "nome": "Jürgen Habermas",
+    "descricao": "Desenvolveu a teoria da ação comunicativa e a ética do discurso, investigando as condições de uma comunicação orientada ao entendimento. Suas reflexões sobre esfera pública e democracia deliberativa ocupam lugar central na teoria crítica contemporânea.",
+    "correntes": ["Teoria crítica"],
+    "fontes": ["https://plato.stanford.edu/entries/habermas/"]
+  },
+  {
+    "id": 8,
+    "slug": "theodor-adorno",
+    "nome": "Theodor Adorno",
+    "descricao": "Associado à Escola de Frankfurt, investigou as relações entre cultura, sociedade e dominação. Trabalhou sobre indústria cultural, estética e dialética negativa, contribuindo para a teoria crítica da sociedade.",
+    "correntes": ["Teoria crítica"],
+    "fontes": ["https://plato.stanford.edu/entries/adorno/"]
+  },
+  {
+    "id": 9,
+    "slug": "gottfried-wilhelm-leibniz",
+    "nome": "Gottfried Wilhelm Leibniz",
+    "descricao": "Filósofo racionalista e matemático, formulou a teoria das mônadas, o princípio de razão suficiente e a harmonia preestabelecida. Contribuiu para a lógica, a metafísica e o desenvolvimento do cálculo infinitesimal.",
+    "correntes": ["Racionalismo"],
+    "fontes": ["https://plato.stanford.edu/entries/leibniz/"]
+  },
+  {
+    "id": 10,
+    "slug": "max-weber",
+    "nome": "Max Weber",
+    "descricao": "Sociólogo e teórico social, estudou a racionalização, a burocracia e as formas de dominação. Em A Ética Protestante e o Espírito do Capitalismo, investigou relações entre orientações religiosas e a formação do capitalismo moderno.",
+    "correntes": ["Sociologia compreensiva"],
+    "fontes": ["https://plato.stanford.edu/entries/weber/"]
+  },
+  {
+    "id": 11,
+    "slug": "johann-gottlieb-fichte",
+    "nome": "Johann Gottlieb Fichte",
+    "descricao": "Representante do idealismo alemão, elaborou a Doutrina da Ciência a partir da atividade do eu e das condições da autoconsciência. Sua filosofia atribui papel central à liberdade e à ação moral.",
+    "correntes": ["Idealismo alemão"],
+    "fontes": ["https://plato.stanford.edu/entries/johann-fichte/"]
+  },
+  {
+    "id": 12,
+    "slug": "friedrich-schleiermacher",
+    "nome": "Friedrich Schleiermacher",
+    "descricao": "Filósofo e teólogo, contribuiu para a hermenêutica ao investigar a compreensão e a interpretação de textos. Também discutiu a experiência religiosa, a linguagem e a individualidade.",
+    "correntes": ["Hermenêutica", "Romantismo"],
+    "fontes": ["https://plato.stanford.edu/entries/schleiermacher/"]
+  },
+  {
+    "id": 13,
+    "slug": "wilhelm-dilthey",
+    "nome": "Wilhelm Dilthey",
+    "descricao": "Investigou os fundamentos das ciências humanas e sua distinção em relação às ciências naturais. Desenvolveu uma abordagem hermenêutica da experiência histórica, da compreensão e das expressões da vida humana.",
+    "correntes": ["Hermenêutica", "Historicismo"],
+    "fontes": ["https://plato.stanford.edu/entries/dilthey/"]
+  },
+  {
+    "id": 14,
+    "slug": "ernst-cassirer",
+    "nome": "Ernst Cassirer",
+    "descricao": "Ligado ao neokantismo, desenvolveu a filosofia das formas simbólicas. Investigou como linguagem, mito, arte e ciência participam da constituição da experiência e da cultura humanas.",
+    "correntes": ["Neokantismo"],
+    "fontes": ["https://plato.stanford.edu/entries/cassirer/"]
+  }
+]
